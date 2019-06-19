@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/layout/header'
 import Todos from './components/Todos';
-
+import AddTodo from './components/AddTodo';
 class App extends Component {
 
   state = {
@@ -40,10 +40,13 @@ delTodo = (id) => {
   render(){
   return (
     <div className="App">
+    <div className="container">
     <Header />
+    <AddTodo />
     <h1> Things of importance: </h1>
     <Todos todos={this.state.todos} markComplete={this.markComplete}
     delTodo={this.delTodo}/>
+       </div>
        </div>
       
   );
