@@ -7,18 +7,18 @@ class App extends Component {
   state = {
     todos: [
     {
-      id: 1;
-      title: "Learn to code";
+      id: 1,
+      title: "Learn to code",
       completed: false
     },
     {
-      id: 2;
-      title: "Read";
+      id: 2,
+      title: "Read",
       completed: false
-    }
+    },
     {
-      id: 3;
-      title: "Write";
+      id: 3,
+      title: "Write",
       completed: false
     }
     ]
@@ -27,7 +27,7 @@ class App extends Component {
   return (
     <div className="App">
     <h1> Here I am </h1>
-    <Todos />
+    <Todos todos={this.state.todos}/>
        </div>
       
   );
