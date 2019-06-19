@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route} from 'react-router';
 import './App.css';
 import Header from './components/layout/header'
 import Todos from './components/Todos';
@@ -49,6 +50,7 @@ addTodo = (title) => {
 }
   render(){
   return (
+    <Router>
     <div className="App">
     <div className="container">
     <Header />
@@ -58,6 +60,7 @@ addTodo = (title) => {
     delTodo={this.delTodo}/>
        </div>
        </div>
+       </Router>
       
   );
 }
