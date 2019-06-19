@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './components/layout/header'
 import Todos from './components/Todos';
 
 class App extends Component {
@@ -39,7 +40,8 @@ delTodo = (id) => {
   render(){
   return (
     <div className="App">
-    <h1> Here I am </h1>
+    <Header />
+    <h1> Things of importance: </h1>
     <Todos todos={this.state.todos} markComplete={this.markComplete}
     delTodo={this.delTodo}/>
        </div>
