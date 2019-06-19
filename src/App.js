@@ -23,7 +23,7 @@ class App extends Component {
     }
     ]
   }
-
+//toggle complete
     markComplete = (id) => {
      this.setState({todos: this.state.todos.map(todo => {
       if(todo.id === id){
@@ -32,11 +32,16 @@ class App extends Component {
       return todo;
      })});
 }
+//deletes the Todo, but returns it after refresh since we dont have the database or backend
+delTodo = (id) => {
+  this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]})
+}
   render(){
   return (
     <div className="App">
     <h1> Here I am </h1>
-    <Todos todos={this.state.todos} markComplete={this.markComplete}/>
+    <Todos todos={this.state.todos} markComplete={this.markComplete}
+    delTodo={this.delTodo}/>
        </div>
       
   );
