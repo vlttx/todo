@@ -4,7 +4,7 @@ function About(){
 	return(
 		<React.Fragment>
 		<h1>About</h1>
-		<p>This is the Todo app. Made with React</p>
+		<p>This is a Todo app. Made with React.</p>
 		</React.Fragment>
 		)
 }
