@@ -32,12 +32,11 @@ delTodo = (id) => {
 }
 
 addTodo = (title) => {
-  const newTodo = {
-    id: uuid.v4(),
-    title, 
+  axios.post('https://jsonplaceholder.typicode.com/todos', {
+    title,
     completed: false
-  }
-  this.setState({ todos: [...this.state.todos, newTodo]})
+  })
+    .then(res => this.setState({ todos: [...this.state.todos, res.data]}));
 }
   render(){
   return (
