@@ -28,7 +28,9 @@ class App extends Component {
 }
 //deletes the Todo, but returns it after refresh since we dont have the database or backend
 delTodo = (id) => {
-  this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]})
+  axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+  .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]}));
+  
 }
 
 addTodo = (title) => {
